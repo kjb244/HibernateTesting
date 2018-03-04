@@ -1,0 +1,34 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+    <session-factory>
+
+        <!-- Connection settings -->
+        <property name="hibernate.connection.driver_class">org.sqlite.JDBC</property>
+        <property name="hibernate.connection.url">jdbc:sqlite:C:/Users/Kevin/Documents/javatesting.db</property>
+        <property name="hibernate.connection.username"></property>
+        <property name="hibernate.connection.password"></property>
+
+        <!-- SQL dialect -->
+        <property name="hibernate.dialect">org.hibernate.dialect.MySQLInnoDBDialect</property>
+
+        <!-- Print executed SQL to stdout -->
+        <property name="show_sql">true</property>
+
+        <!-- Drop and re-create all database on startup
+                 <property name="hibernate.hbm2ddl.auto">create-drop</property>
+
+         -->
+
+        <property name="hibernate.current_session_context_class">thread</property>
+
+        <!-- Annotated entity classes -->
+
+
+        <mapping class="main.java.com.spring.model.AddressInfo"/>
+        <mapping class="main.java.com.spring.model.DogInfo"/>
+    </session-factory>
+</hibernate-configuration>
