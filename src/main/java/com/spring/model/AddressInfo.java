@@ -71,4 +71,15 @@ public class AddressInfo {
     public void setDogInfoSet(Set<DogInfo> dogInfoSet) {
         this.dogInfoSet = dogInfoSet;
     }
+
+    @Override
+    public String toString() {
+        return "AddressInfo{" +
+                "id=" + id +
+                ", firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", email='" + email + '\'' +
+                ", dogInfoSet=" + dogInfoSet +
+                '}';
+    }
 }

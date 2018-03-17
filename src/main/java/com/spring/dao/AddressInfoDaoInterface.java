@@ -9,5 +9,7 @@ public interface AddressInfoDaoInterface<T, Id extends Serializable> {
 
     public List<T> findAll();
 
+    public List<Object[]> customSqlQuery(String query);
+
 
 }

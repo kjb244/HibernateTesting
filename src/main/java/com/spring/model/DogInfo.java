@@ -69,4 +69,15 @@ public class DogInfo {
     public void setAddressInfo(AddressInfo addressInfo) {
         this.addressInfo = addressInfo;
     }
+
+    @Override
+    public String toString() {
+        return "DogInfo{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", breed='" + breed + '\'' +
+                ", color='" + color + '\'' +
+                ", addressInfo=" + addressInfo +
+                '}';
+    }
 }
