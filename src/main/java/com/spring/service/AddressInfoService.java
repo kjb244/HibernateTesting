@@ -25,4 +25,13 @@ public class AddressInfoService {
         Utils.closeCurrentSession();
         return results;
     }
+
+    public boolean insert(AddressInfo addressInfo){
+        addressInfoDao = new AddressInfoDao();
+        Utils.openCurrentSessionwithTransaction();
+        boolean result = addressInfoDao.insert(addressInfo);
+        Utils.closeCurrentSessionwithTransaction();
+        return result;
+
+    }
 }

@@ -12,6 +12,14 @@ public class Testing {
 
     public static void main(String[] args){
         AddressInfoService ai = new AddressInfoService();
+
+        AddressInfo addressInfo = new AddressInfo();
+        addressInfo.setFirstName("kevin");
+        addressInfo.setLastName("johnson");
+        addressInfo.setEmail("test@test.com");
+       // boolean insertResult = ai.insert(addressInfo);
+
+
         List<AddressInfo> addressInfoList = ai.findAll();
         Set<DogInfo> dogInfoSet = addressInfoList.get(0).getDogInfoSet();
 
@@ -19,6 +27,7 @@ public class Testing {
                 "select a.firstName, a.lastName, d.name\n" +
                 "from address_info a\n" +
                 "  INNER JOIN dog_info d on a.id = d.address_info_id");
-        System.out.println(results.get(0)[1].toString());
+
+
     }
 }

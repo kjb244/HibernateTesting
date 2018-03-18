@@ -8,12 +8,12 @@
 
         <!-- Connection settings -->
         <property name="hibernate.connection.driver_class">org.sqlite.JDBC</property>
-        <property name="hibernate.connection.url">jdbc:sqlite:C:/Users/Kevin/Documents/javatesting.db</property>
+        <property name="hibernate.connection.url">jdbc:sqlite:C:/Users/Kevin/Documents/hibernatetesting.sqlite</property>
         <property name="hibernate.connection.username"></property>
         <property name="hibernate.connection.password"></property>
 
         <!-- SQL dialect -->
-        <property name="hibernate.dialect">org.hibernate.dialect.MySQLInnoDBDialect</property>
+        <property name="hibernate.dialect">com.enigmabridge.hibernate.dialect.SQLiteDialect</property>
 
         <!-- Print executed SQL to stdout -->
         <property name="show_sql">true</property>

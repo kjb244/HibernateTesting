@@ -11,7 +11,7 @@ import java.util.Set;
 public class AddressInfo {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.TABLE)
     @Column( updatable = false, nullable = false)
     private int id;
 
