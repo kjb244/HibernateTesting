@@ -7,11 +7,12 @@ import java.util.HashSet;
 import java.util.Set;
 
 @Entity
+
 @Table(name = "address_info")
 public class AddressInfo {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.TABLE)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column( updatable = false, nullable = false)
     private int id;
 

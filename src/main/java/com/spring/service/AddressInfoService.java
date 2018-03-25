@@ -10,8 +10,11 @@ public class AddressInfoService {
 
     AddressInfoDao addressInfoDao;
 
-    public List<AddressInfo> findAll(){
+    public AddressInfoService(){
         addressInfoDao = new AddressInfoDao();
+    }
+
+    public List<AddressInfo> findAll(){
         Utils.openCurrentSession();
         List<AddressInfo> addressInfoList = addressInfoDao.findAll();
         Utils.closeCurrentSession();
@@ -19,7 +22,6 @@ public class AddressInfoService {
     }
 
     public List<Object[]> customSqlQuery(String query){
-        addressInfoDao = new AddressInfoDao();
         Utils.openCurrentSession();
         List<Object[]> results =  addressInfoDao.customSqlQuery(query);
         Utils.closeCurrentSession();
@@ -27,7 +29,6 @@ public class AddressInfoService {
     }
 
     public boolean insert(AddressInfo addressInfo){
-        addressInfoDao = new AddressInfoDao();
         Utils.openCurrentSessionwithTransaction();
         boolean result = addressInfoDao.insert(addressInfo);
         Utils.closeCurrentSessionwithTransaction();

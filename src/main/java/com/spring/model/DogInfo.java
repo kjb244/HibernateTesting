@@ -22,7 +22,7 @@ public class DogInfo {
     @Column
     private String color;
 
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
     @JoinColumn(name = "address_info_id", nullable = false)
     @JsonBackReference
     private AddressInfo addressInfo;

@@ -7,13 +7,13 @@
     <session-factory>
 
         <!-- Connection settings -->
-        <property name="hibernate.connection.driver_class">org.sqlite.JDBC</property>
-        <property name="hibernate.connection.url">jdbc:sqlite:C:/Users/Kevin/Documents/hibernatetesting.sqlite</property>
-        <property name="hibernate.connection.username"></property>
-        <property name="hibernate.connection.password"></property>
+        <property name="hibernate.connection.driver_class">org.postgresql.Driver</property>
+        <property name="hibernate.connection.url">jdbc:postgresql://localhost/javatesting</property>
+        <property name="hibernate.connection.username">postgres</property>
+        <property name="hibernate.connection.password">xxx</property>
 
         <!-- SQL dialect -->
-        <property name="hibernate.dialect">com.enigmabridge.hibernate.dialect.SQLiteDialect</property>
+        <property name="hibernate.dialect">org.hibernate.dialect.PostgreSQL82Dialect</property>
 
         <!-- Print executed SQL to stdout -->
         <property name="show_sql">true</property>
